@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>News - Virtual Visitors</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    header, footer {
+      background-color: #0d3b66;
+      color: white;
+      padding: 1em;
+      text-align: center;
+    }
+    nav a {
+      margin: 0 1em;
+      color: white;
+      text-decoration: none;
+    }
+    nav button {
+      margin-left: 1em;
+      padding: 0.5em 1em;
+    }
+    main {
+      padding: 2em;
+    }
+    .news-title {
+      text-align: center;
+      color: #0d3b66;
+      margin-bottom: 2em;
+    }
+    .news-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5em;
+    }
+    .news-card {
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      padding: 1em;
+      background-color: #f9f9f9;
+      box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.05);
+    }
+    .news-card h4 {
+      margin-top: 0;
+      color: #0d3b66;
+    }
+    .news-card p.date {
+      font-size: 0.9em;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Virtual visitors</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="news.html" style="color: #ffa500;">News</a>
+      <a href="events.html">Events</a>
+      <a href="membership.html">Membership</a>
+      <a href="contact.html">Contact</a>
+      <button onclick="location.href='index.html'">Log in</button>
+      <button onclick="location.href='register.html'">Sign up</button>
+    </nav>
+  </header>
+
+  <main>
+    <h2 class="news-title">Latest News</h2>
+    <div class="news-container">
+      <div class="news-card">
+        <h4>New Virtual Visitor Devices Launched</h4>
+        <p class="date">April 10, 2025</p>
+        <p>
+          We’ve released a new line of bedside communication devices designed to improve
+          video call clarity and accessibility for ICU patients.
+        </p>
+      </div>
+      <div class="news-card">
+        <h4>Partnership with Global Health Alliance</h4>
+        <p class="date">March 25, 2025</p>
+        <p>
+          Virtual Visitors has partnered with GHA to expand access to our virtual care
+          tools in developing countries.
+        </p>
+      </div>
+      <div class="news-card">
+        <h4>2025 Annual Conference Announced</h4>
+        <p class="date">March 15, 2025</p>
+        <p>
+          Our next virtual conference will feature keynote speakers from Mayo Clinic
+          and Johns Hopkins, sharing innovations in digital ICU care.
+        </p>
+      </div>
+      <div class="news-card">
+        <h4>New Research on Virtual Presence Benefits</h4>
+        <p class="date">February 28, 2025</p>
+        <p>
+          Our latest study shows that virtual family presence significantly improves patient
+          morale and reduces recovery time in critical care units.
+        </p>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    &copy; 2025 Virtual Visitors. All rights reserved.
+  </footer>
+</body>
+</html>

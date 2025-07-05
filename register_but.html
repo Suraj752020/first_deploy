@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Event Registration - Virtual Visitors</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header, footer {
+      background-color: #0d3b66;
+      color: white;
+      text-align: center;
+      padding: 1em;
+    }
+
+    nav a {
+      margin: 0 1em;
+      color: white;
+      text-decoration: none;
+    }
+
+    main {
+      padding: 2em;
+    }
+
+    h2 {
+      color: #0d3b66;
+      text-align: center;
+    }
+
+    form {
+      max-width: 500px;
+      margin: 0 auto;
+      background-color: #f1f5f9;
+      padding: 2em;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    }
+
+    label {
+      display: block;
+      margin-bottom: 0.5em;
+      color: #333;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 0.7em;
+      margin-bottom: 1em;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    button {
+      background-color: #0d3b66;
+      color: white;
+      padding: 0.7em 2em;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #09456c;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Virtual visitors</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="news.html">News</a>
+      <a href="events.html">Events</a>
+      <a href="membership.html">Membership</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Register for an Event</h2>
+    <form action="thankyou.html" method="POST">
+
+      <label for="fullname">Full Name</label>
+      <input type="text" id="fullname" name="fullname" required>
+
+      <label for="email">Email Address</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="event">Select Event</label>
+      <select id="event" name="event" required>
+        <option value="">-- Please choose an event --</option>
+        <option value="icu-innovation">Virtual ICU Innovation Summit</option>
+        <option value="health-tech">Global Health Tech Expo</option>
+        <option value="icu-workshop">Family-Centered ICU Workshop</option>
+        <option value="annual-meetup">Virtual Visitors Annual Meet-Up</option>
+      </select>
+
+      <label for="message">Additional Comments (optional)</label>
+      <textarea id="message" name="message" rows="4"></textarea>
+      <a href="thankyou.html"><button type="button">Register</button></a></li>
+

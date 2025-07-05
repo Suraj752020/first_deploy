@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us - Virtual Visitors</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background-color: #f0f4f8;
+      color: #333;
+    }
+
+    header {
+      background-color: #0d3b66;
+      color: white;
+      padding: 1em;
+      text-align: center;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 1em;
+      text-decoration: none;
+    }
+
+    main {
+      max-width: 800px;
+      margin: 2em auto;
+      background: white;
+      padding: 2em;
+      border-radius: 10px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      text-align: center;
+      color: #0d3b66;
+    }
+
+    form {
+      margin-top: 2em;
+    }
+
+    label {
+      display: block;
+      margin-top: 1em;
+      font-weight: bold;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 0.8em;
+      margin-top: 0.5em;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 1em;
+    }
+
+    .submit-btn {
+      background-color: #0d3b66;
+      color: white;
+      border: none;
+      padding: 1em;
+      font-size: 1em;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 2em;
+      width: 100%;
+    }
+
+    .submit-btn:hover {
+      background-color: #09456c;
+    }
+
+    .contact-info {
+      margin-top: 3em;
+      text-align: center;
+    }
+
+    .contact-info p {
+      margin: 0.5em 0;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1em;
+      margin-top: 2em;
+      background-color: #0d3b66;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Virtual Visitors</h1>
+    <nav>
+      <a href="dashboard.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="events.html">Events</a>
+      <a href="membership.html">Membership</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Contact Us</h2>
+    <form action="#" method="POST">
+      <label for="name">Your Name</label>
+      <input type="text" id="name" name="name" required />
+
+      <label for="email">Your Email</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="subject">Subject</label>
+      <input type="text" id="subject" name="subject" required />
+
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
+
+      <button type="submit" class="submit-btn">Send Message</button>
+    </form>
+
+    <div class="contact-info">
+      <h3>Reach Out to Us</h3>
+      <p>Email: support@virtualvisitors.org</p>
+      <p>Phone: +1 (555) 123-4567</p>
+      <p>Address: 123 Health Lane, Virtual City, USA</p>
+    </div>
+  </main>
+
+  <footer>
+    &copy; 2025 Virtual Visitors. All rights reserved.
+  </footer>
+
+</body>
+</html>

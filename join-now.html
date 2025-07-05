@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Join Now - Virtual Visitors</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background: #f7fafc;
+      color: #333;
+    }
+
+    header {
+      background-color: #0d3b66;
+      color: white;
+      padding: 1em;
+      text-align: center;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 1em;
+      text-decoration: none;
+    }
+
+    main {
+      max-width: 700px;
+      margin: 2em auto;
+      background: white;
+      padding: 2em;
+      border-radius: 10px;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      text-align: center;
+      color: #0d3b66;
+    }
+
+    label {
+      display: block;
+      margin-top: 1em;
+      font-weight: bold;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 0.8em;
+      margin-top: 0.5em;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .payment-methods {
+      margin-top: 2em;
+    }
+
+    .payment-option {
+      margin-top: 1em;
+    }
+
+    .submit-btn {
+      background-color: #0d3b66;
+      color: white;
+      border: none;
+      padding: 1em;
+      font-size: 1em;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 2em;
+      width: 100%;
+      transition: background 0.3s;
+    }
+
+    .submit-btn:hover {
+      background-color: #09456c;
+    }
+
+    .qr-section {
+      margin-top: 1em;
+      text-align: center;
+      display: none;
+    }
+
+    .qr-section img {
+      width: 200px;
+      margin-top: 1em;
+      border-radius: 10px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1em;
+      margin-top: 2em;
+      background-color: #0d3b66;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Virtual Visitors</h1>
+    <nav>
+        <a href="dashboard.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="news.html">News</a>
+        <a href="events.html">Events</a>
+        <a href="membership.html">Membership</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+  </header>
+
+  <main>
+    <h2>Join & Pay for Membership</h2>
+    <form action="#" method="POST">
+      <label for="fullname">Full Name</label>
+      <input type="text" id="fullname" name="fullname" required />
+
+      <label for="email">Email Address</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="membership">Select Membership Type</label>
+      <select id="membership" name="membership" required>
+        <option value="">-- Please choose an option --</option>
+        <option value="basic">Basic - Free</option>
+        <option value="premium">Premium - $49/year</option>
+        <option value="organization">Organization - $199/year</option>
+      </select>
+
+      <div class="payment-methods">
+        <label for="payment-method">Choose Payment Method:</label>
+        <select id="payment-method" onchange="togglePaymentFields()" required>
+          <option value="">-- Select Method --</option>
+          <option value="card">Credit/Debit Card</option>
+          <option value="qr">UPI / QR Code</option>
+        </select>
+
+        <div class="payment-option" id="card-fields" style="display:none;">
+          <label for="cardName">Cardholder Name</label>
+          <input type="text" id="cardName" name="cardName" />
+
+          <label for="cardNumber">Card Number</label>
+          <input type="text" id="cardNumber" name="cardNumber" maxlength="16" />
+
+          <label for="expiry">Expiry Date (MM/YY)</label>
+          <input type="text" id="expiry" name="expiry" placeholder="MM/YY" />
+
+          <label for="cvv">CVV</label>
+          <input type="text" id="cvv" name="cvv" maxlength="4" />
+        </div>
+
+        <div class="qr-section" id="qr-fields">
+          <p>Scan the QR code using any UPI app (Google Pay, Paytm, PhonePe):</p>
+          <img src="qr.jpg" alt="QR Code" />
+          <p>UPI ID: <strong>virtual@upi</strong></p>
+        </div>
+      </div>
+
+      <button type="submit" class="submit-btn">Submit Payment</button>
+    </form>
+  </main>
+
+  <footer>
+    &copy; 2025 Virtual Visitors. All rights reserved.
+  </footer>
+
+  <script>
+    function togglePaymentFields() {
+      const method = document.getElementById("payment-method").value;
+      const cardFields = document.getElementById("card-fields");
+      const qrFields = document.getElementById("qr-fields");
+
+      cardFields.style.display = (method === "card") ? "block" : "none";
+      qrFields.style.display = (method === "qr") ? "block" : "none";
+    }
+  </script>
+</body>
+</html>
